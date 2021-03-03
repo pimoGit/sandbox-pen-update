@@ -1,0 +1,30 @@
+#container {
+	width: 50%;
+	margin: auto;
+}
+
+header {
+	text-align: center;
+	border-bottom: 2px solid #cf8a05;
+    background: #ededed;
+}
+
+main {
+	margin-left: 15px;
+}
+
+section h2 {
+	color: #cf8a05;
+}
+
+.item h3 {
+	font-style: italic;
+}
+
+hr {
+	border-color: #cf8a05;
+}
+
+footer p {
+	font-size: 12px;
+}
