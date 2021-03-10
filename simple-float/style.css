@@ -1,0 +1,83 @@
+/* generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 150px;
+}
+
+/* main */
+.container-main {
+    width: 100%;
+}
+
+/* CLEARFIX */
+/* versione clearfix con after che consigliamo */
+.container-main:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/* per eventuale versione meno semantica */
+.clearfix{
+    clear: both;
+}
+
+/* entrambi in left  */
+.sidebar, 
+.content {
+    float: left;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.content {
+    width: 70%;
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+/* regole di DEBUG */
+
+header {
+    background: red;
+}
+
+.container-main {
+    /* quando togliamo altezza fissa, cosa succede se ci dimentichiamo il clearfix? */
+    height: 400px; 
+}
+
+.sidebar {
+    background: yellow;
+    height: 400px; 
+}
+
+.content {
+    background: green;
+    height: 400px; 
+}
+
+footer {
+    background: blue;
+}
