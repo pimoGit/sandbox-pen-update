@@ -9,10 +9,14 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- header -->
         <header>
+
             <div id="logo">
                 <img src="img/logo.png" alt="">
             </div>
+
             <nav>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Editorials</a></li>
@@ -21,73 +25,90 @@
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Contact</a></li>
             </nav>
-            <div class="banner">
-                <div class="overlay"></div>
-                <img src="img/banner.jpg" alt="">
-                <div class="banner-text">
-                    <h3>Pretium ac placerat dui interdum nunc in eros urna morbi</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra nisl rutrum, pretium lectus nec, sagittis dolor. Phasellus eleifend efficitur...</p>
-                </div>
-            </div>
+
         </header>
 
-        <main class="clearfix">
+
+        <!-- jumbotron/banner messo fuori da header per andare più in parallelo con screeshot struttura -->
+        <div class="banner">
+            <div class="overlay"></div>
+            <img src="img/banner.jpg" alt="">
+            <div class="banner-text">
+                <h3>Pretium ac placerat dui interdum nunc in eros urna morbi</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra nisl rutrum, pretium lectus nec, sagittis dolor. Phasellus eleifend efficitur...</p>
+            </div>
+        </div>
+
+        <!-- corpo -->
+        <main>
 
             <div class="title">
                 <h2>Leadership</h2>
                 <h4>Fertenum urna a libero tempus</h4>
             </div>
 
-            <div class="col col-left">
-                <div class="col-in">
-                    <div class="col-img">
-                        <div class="overlay"></div>
-                        <img src="img/img-1.jpg" alt="">
-                    </div>
-                    <div class="col-text">
-                        <h4>Lorem</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum illo reprehenderit, aspernatur beatae architecto vero dolorem at facilis ad, placeat velit porro dolorum molestias alias assumenda ullam? Sint, veniam.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-center">
-                <div class="col-in">
-                    <div class="col-img">
-                        <div class="overlay"></div>
-                        <img src="img/banner-2.jpg" alt="">
-                    </div>
-                    <div class="col-text">
-                        <h4>Ipsum</h4>
-                        <p>
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, minus, cum. Laudantium repellendus repellat beatae ex magnam unde sint earum, voluptatibus, vero nulla distinctio, harum dolor iure reprehenderit consectetur magni.</span>
-                            <span>Voluptatibus cum sapiente similique sunt mollitia voluptates, molestiae odio atque reiciendis corrupti quae pariatur, ex delectus beatae corporis recusandae minima explicabo totam illo distinctio, quidem fugit dolore? Accusamus est, quaerat?</span>
-                            <span>Ratione dolorem consequuntur ab temporibus enim corporis quia et doloribus libero, tenetur dolorum earum veritatis! Saepe provident, quae. Itaque velit deserunt molestiae ullam tenetur quisquam adipisci recusandae, sit fugiat quia.</span>
-                            <span>Repellat assumenda asperiores voluptatem ad voluptate alias quos fugit sed possimus, aspernatur a, labore, laboriosam enim aut! Ratione doloribus, unde. Quidem totam, cum in praesentium doloribus nesciunt atque enim commodi.</span>
-                            <span>Perspiciatis veritatis commodi quod, quos ducimus exercitationem qui provident vel adipisci eos modi molestias quas debitis, doloribus mollitia sapiente quaerat dignissimos quis unde ea optio autem voluptas corrupti. Distinctio, itaque.</span>
-                        </p>
+            <!-- blocco a colonne con "contenitore di row" in clearfix -->
+            <div class="clearfix">
+                
+                <!-- colonna sx -->
+                <div class="col col-left">
+                    <div class="col-in">
+                        <div class="col-img">
+                            <div class="overlay"></div>
+                            <img src="img/img-1.jpg" alt="">
+                        </div>
+                        <div class="col-text">
+                            <h4>Lorem</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum illo reprehenderit, aspernatur beatae architecto vero dolorem at facilis ad, placeat velit porro dolorum molestias alias assumenda ullam? Sint, veniam.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col col-right">
-                <div class="col-in">
-                    <div class="col-img">
-                        <div class="overlay"></div>
-                        <img src="img/img-3.jpg" alt="">
-                    </div>
-                    <div class="col-text">
-                        <h4>Lorem</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, saepe debitis ipsum dolorum consectetur aspernatur laborum voluptatum ex ipsam corporis quasi veritatis laboriosam nisi beatae, aut quisquam placeat nihil. Totam.</p>
-                    </div>
-                </div>
-            </div>
 
+                <!-- blocco centrale  -->
+                <div class="col col-center">
+                    <div class="col-in">
+                        <div class="col-img">
+                            <div class="overlay"></div>
+                            <img src="img/banner-2.jpg" alt="">
+                        </div>
+                        <div class="col-text">
+                            <h4>Ipsum</h4>
+                            <p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, minus, cum. Laudantium repellendus repellat beatae ex magnam unde sint earum, voluptatibus, vero nulla distinctio, harum dolor iure reprehenderit consectetur magni.</span>
+                                <span>Voluptatibus cum sapiente similique sunt mollitia voluptates, molestiae odio atque reiciendis corrupti quae pariatur, ex delectus beatae corporis recusandae minima explicabo totam illo distinctio, quidem fugit dolore? Accusamus est, quaerat?</span>
+                                <span>Ratione dolorem consequuntur ab temporibus enim corporis quia et doloribus libero, tenetur dolorum earum veritatis! Saepe provident, quae. Itaque velit deserunt molestiae ullam tenetur quisquam adipisci recusandae, sit fugiat quia.</span>
+                                <span>Repellat assumenda asperiores voluptatem ad voluptate alias quos fugit sed possimus, aspernatur a, labore, laboriosam enim aut! Ratione doloribus, unde. Quidem totam, cum in praesentium doloribus nesciunt atque enim commodi.</span>
+                                <span>Perspiciatis veritatis commodi quod, quos ducimus exercitationem qui provident vel adipisci eos modi molestias quas debitis, doloribus mollitia sapiente quaerat dignissimos quis unde ea optio autem voluptas corrupti. Distinctio, itaque.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- colonna  dx -->
+                <div class="col col-right">
+                    <div class="col-in">
+                        <div class="col-img">
+                            <div class="overlay"></div>
+                            <img src="img/img-3.jpg" alt="">
+                        </div>
+                        <div class="col-text">
+                            <h4>Lorem</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, saepe debitis ipsum dolorum consectetur aspernatur laborum voluptatum ex ipsam corporis quasi veritatis laboriosam nisi beatae, aut quisquam placeat nihil. Totam.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </main>
+
+        <!-- footer -->
         <footer>
             <span class="love">
                 Designed with
             </span>
         </footer>
+
     </div>
 
 </body>
