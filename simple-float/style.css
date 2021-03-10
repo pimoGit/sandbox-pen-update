@@ -60,7 +60,7 @@ footer {
 /* regole di DEBUG */
 
 header {
-    background: red;
+    background: yellow;
 }
 
 .container-main {
@@ -69,15 +69,15 @@ header {
 }
 
 .sidebar {
-    background: yellow;
+    background: rgb(211, 145, 227);
     height: 400px; 
 }
 
 .content {
-    background: green;
+    background: purple;
     height: 400px; 
 }
 
 footer {
-    background: blue;
+    background: lightblue;
 }
