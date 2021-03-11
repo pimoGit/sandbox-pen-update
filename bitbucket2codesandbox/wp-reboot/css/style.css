@@ -27,25 +27,31 @@ h2 {
 }
 
 /* header */
-#logo img {
+header{
+    margin-bottom: 40px;
+}
+
+#header-up img {
     height: 70px;
     padding-right: 20px;
     border-right: 1px solid #e5e5e5;
 }
-
-nav {
-    margin-top: 40px;
-    margin-bottom: 40px;
+#header-up a {
+    display: inline-block;
 }
 
-nav li {
+header nav {
+    margin-top: 40px;
+}
+
+header nav li {
     display: inline;
     list-style: none;
     text-transform: uppercase;
     padding-right: 10px;
 }
 
-nav li a {
+header nav li a {
     color: #858585;
     text-decoration: none;
 }
@@ -60,6 +66,7 @@ nav li a {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .overlay {
@@ -80,6 +87,7 @@ nav li a {
 .banner-text {
     position: absolute;
     bottom: 20px;
+    left: 0;
     width: 60%;
     padding: 50px;
 }
@@ -91,7 +99,7 @@ nav li a {
 
 /* main */
 .title {
-    margin: 40px 0;
+    margin-bottom: 40px;
 }
 
 .title h4 {
@@ -100,16 +108,11 @@ nav li a {
 }
 
 /* Colonne */
-.col {
+.col-side, .col-center {
     float: left;
 }
 
-/* blocco interno alla colonna di raggrupamento blocco contenuto */
-.col-in-item {
-    margin-bottom: 20px;
-}
-
-.col-left {
+.col-side {
     width: 20%;
 }
 
@@ -119,8 +122,9 @@ nav li a {
     padding-right: 20px;
 }
 
-.col-right {
-    width: 20%;
+/* blocco interno alla colonna di raggrupamento blocco contenuto */
+.col-in-item {
+    margin-bottom: 20px;
 }
 
 .col-img {
@@ -160,5 +164,3 @@ footer {
     color: red;
     font-size: 20px;
 }
-
-/* da cancellare */
