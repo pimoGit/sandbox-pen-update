@@ -1,0 +1,28 @@
+div {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: 1px;
+  }
+  
+  .green{
+    background: green;
+  }
+  
+  .blue{
+    background: blue;
+  }
+
+  .yellow{
+      background: yellow;
+      display: inline-block;
+  }
+  
+  .red{
+    background: red;
+    position:relative;
+    top: 0;
+    left: 10%;
+    /* display solo per affiancare, non cambia comportamento relative */
+    display: inline-block;
+  }
