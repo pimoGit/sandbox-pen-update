@@ -104,8 +104,9 @@ nav li a {
     float: left;
 }
 
-.col-in {
-    /* background-color: gray; */
+/* blocco interno alla colonna di raggrupamento blocco contenuto */
+.col-in-item {
+    margin-bottom: 20px;
 }
 
 .col-left {
