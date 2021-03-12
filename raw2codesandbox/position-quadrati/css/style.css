@@ -31,6 +31,8 @@
     position: absolute;
     bottom: 0;
     left: 100%;
+    /* alternativa */
+    /* right: -50px; */
     background-color: green;
   }
   
@@ -57,7 +59,7 @@
     top: 0;
     right: 0;
   }
-  /* ma possiamo usare anche il float */
+  /* ma possiamo usare anche il float, se già visto */
   /* 
   .live-2 .pos-right {
     float: right;
@@ -83,6 +85,9 @@
     width: 300px;
     height: 300px;
     background-color: blue; 
+    /* volendo in alternativa con float se già visto
+     (in quel caso andrebbe il clearfix a green) */
+    /* float: left; */
   }
   
   .live-3 .red {
@@ -98,4 +103,8 @@
   }
   .live-3 .blue:last-child .red:last-child {
     margin-left: 10px;
+    /* volendo possiamo avere lo stesso effetto con relative, 
+    ma ingombro con comportamento diverso */
+    /* position: relative;
+    left: 10px; */
   }
