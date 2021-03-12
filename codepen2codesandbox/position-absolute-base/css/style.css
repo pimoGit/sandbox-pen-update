@@ -1,0 +1,38 @@
+.container {
+  height: 250px;
+  width: 500px;
+  border: 1px solid black;
+  margin: 1px;
+  position: relative;
+  background: lightgreen;
+}
+
+
+div {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin: 1px;
+  }
+  
+  .green{
+    background: green;
+  }
+  
+  .blue{
+    background: blue;
+  }
+
+  .yellow{
+      background: yellow;
+      display: inline-block;
+  }
+  
+  .red{
+    background: red;
+    position:absolute;
+    top: 10px;
+    left: 40px;
+    /* anche ri-attivassi l'inline-block non cambierebbe nulla */
+    /* display: inline-block; */
+  }
