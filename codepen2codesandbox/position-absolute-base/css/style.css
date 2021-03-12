@@ -33,6 +33,6 @@ div {
     position:absolute;
     top: 10px;
     left: 40px;
-    /* anche ri-attivassi l'inline-block non cambierebbe nulla */
+    /* anche ri-attivassi l'inline-block non cambierebbe nulla, con absolute attivo */
     /* display: inline-block; */
   }
