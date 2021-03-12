@@ -52,6 +52,10 @@
   .live-2 .blue {
     background-color: blue;
   }
+
+  .live-2 .green {
+    background-color: green;
+  }
   
   /* per vedere position */
   .live-2 .pos-right {
@@ -65,12 +69,22 @@
    .live-2 .square:first-child{
       /* float: left; */
   } 
+
+  .live-2 .pos-bottom-z {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    /* se tolgo z-index va sotto */
+    z-index: 10;
+  }
   
   .live-2 .pos-bottom-right {
     position: absolute;
     bottom: 0;
     right: 0;
   }
+
+
   
   /* Live 3 */
   .live-3 .green {
@@ -107,4 +121,15 @@
     ma ingombro con comportamento diverso */
     /* position: relative;
     left: 10px; */
+  }
+
+  /* live 4 fixed */
+    /* essendoci del contenuto che fa scrollare la pagina, il blocco rimane fisso */
+  #live4 {
+    position: fixed;
+    top:0;
+    right:0;
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
   }
