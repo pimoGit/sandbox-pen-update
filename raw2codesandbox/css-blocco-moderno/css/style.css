@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #FFF;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.box {
+  width: calc(100% - 20px);
+  height: calc(100vh - 20px);
+  margin: 10px auto;
+  background-color: grey;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  /*
+  position: relative;
+  overflow: hidden; */
+}
+
+/* solo se usiamo img tag al posto di background
+lo posizioniamo con absolute per centrarlo rispetto a .box*/
+/* .box img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+} */
+
+.layover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box:hover .layover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px #000;
+}
+.box:hover h2 {
+  text-shadow: none;
+}
+
+#roma {
+  background-image: url(https://img2.meteo.it/bin/90.$plit/C_109_meteoCitta_4_upiFoto.jpg);
+}
+#roma h2 {
+  font-weight: 400;
+}
+#napoli {
+  background-image: url(http://www.poli-listaperta.it/wp-content/uploads/2019/09/Panorama-di-Napoli-Gettyimages.jpg);
+}
+#milano {
+  background-image: url(http://www.youparti.com/nightlife_2016/nightlife/wp-content/uploads/2018/10/Milano.jpg);
+}
