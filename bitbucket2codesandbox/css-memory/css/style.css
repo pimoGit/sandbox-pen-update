@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Nerko One',
-  cursive;
+  font-family: 'Nerko One', cursive;
   font-size: 1.5em;
   background-color: #add8e6;
 }
@@ -14,6 +13,7 @@ body {
   width: 65%;
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 header {
   padding: 10px;
@@ -24,17 +24,26 @@ header {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-main .cards {
+.cards {
   padding: 10px 0 0;
-  text-align: center;
 }
-main .row {
+.cards .row {
   margin-bottom: 10px;
 }
-main .card-element {
+
+/* versione float
+.cards .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
+.cards .card-element {
   position: relative;
-  display: inline-block;
-  width: 20%;
+  display: inline-block; /* versione inline-block*/
+  width: 22%; /* versione inline-block*/
+  /* float: left; versione float*/
+  /* width: 23%; versione float*/
   margin: 1%;
   padding: 20px 20px 40px;
   border-radius: 10px;
@@ -47,16 +56,11 @@ main .card-element {
   cursor: pointer;
 }
 
-main .card-text {
+.cards .card-text {
   display: none;
-}
-
-main .card-element:hover .card-text,
-main .card-element.active .card-text {
   position: absolute;
   bottom: 0;
   left: 0;
-  display: block;
   width: 100%;
   line-height: 2em;
   font-size: 1.3em;
@@ -64,23 +68,28 @@ main .card-element.active .card-text {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-main .card-element:hover .card-text {
+.cards .card-element:hover .card-text,
+ .cards .card-element.active .card-text { /*.active  è la card scoperta sempre */
+  display: block;
+}
+
+.cards .card-element:hover .card-text {
   color: rgb(230, 121, 25);
 }
 
 
-main .card-element img {
+.cards .card-element img {
   width: 100%;
   visibility: hidden;
 }
 
-main .card-element.active, 
-main .card-element:hover {
+.cards .card-element.active, 
+.cards .card-element:hover {
   background-image: none;
 }
 
-main .card-element.active img,
-main .card-element:hover img {
+.cards .card-element.active img,
+.cards .card-element:hover img {
   visibility: visible;
 }
 
