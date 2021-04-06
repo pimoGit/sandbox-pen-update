@@ -5,7 +5,6 @@
 
 .box {
   background-color: paleGreen;
-  cursor: pointer;
   height: 300px;
   margin: 50px auto;
 }
@@ -17,6 +16,20 @@
   text-align: center;
 }
 
+/* parte di interazione */
+
+/* parte di cambio figlio */
 .box:hover .title {
   color: red;
+}
+
+/* parte di cambio padre 
+(questa parte di può volendo aggiungere dopo
+per rimancare che prima abbiamo lavorato sul figlio
+e anche che nulla ci vieta di lavorare su più livelli
+)
+*/
+.box:hover{
+  cursor: pointer;
+  background-color: rgb(181, 251, 181);
 }
