@@ -1,0 +1,22 @@
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: paleGreen;
+  cursor: pointer;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.title {
+  color: blue;
+  font-size: 50px;
+  line-height: 300px;
+  text-align: center;
+}
+
+.box:hover .title {
+  color: red;
+}
