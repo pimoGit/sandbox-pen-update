@@ -21,7 +21,7 @@ body {
   width: 100%;
   height: 70px;
   text-align: center; /* centratura orizzontale blocco menù */
-  z-index: 500; /* diamo uno z-index alto abbastanza per evitare che parti di contenuto finiscano sopra, ma lasciasmo spazio per eventuale altro*/
+  z-index: 500; /* diamo uno z-index alto abbastanza per evitare che parti di contenuto finiscano sopra, ma lasciasmo spazio per eventuale altro (es. modali, overlay, etc.)*/
 }
 
   /* menu */
@@ -32,7 +32,7 @@ body {
 #main-header nav li{
   margin: 0 5px;
   display: inline-block;
-  line-height: 70px; /* centratura verticale voci menù (sul li posso poi espandere l'area sensibile del link)*/
+  line-height: 70px; /* centratura verticale voci menù (sul li così poi posso poi espandere l'area sensibile del link)*/
 }
 
 #main-header nav li a{
@@ -52,8 +52,8 @@ body {
 
 /* logo */
 #main-header nav .logo img {
- vertical-align: middle;
- width: 111px; /* PARTE ACCESSORIA: resize non necessario se l'img è fatta ad hoc e non richiede alte risoluzioni (es. retina)*/
+ vertical-align: middle;/* centratura verticale img logo */
+ width: 111px; /* PARTE ACCESSORIA da spiegare (se lo si ritiene utile): resize non necessario se l'img è fatta ad hoc e non richiede alte risoluzioni (es. retina)*/
  height: auto;
 }
 
@@ -62,10 +62,10 @@ body {
 }
 
 
-/* contenuto */
+/* contenuto (per sottolineare la funzionalità di header fisso) */
 
 main {
-  margin-top: 100px; /* da aggiungere perchè non finisca sotto l'header fixed (qualcosa in più di altezza header per dare spazio)*/
+  margin-top: 100px; /* da aggiungere perchè non finisca da subito sotto l'header fixed (qualcosa in più di altezza header per dare spazio)*/
   padding: 10px;
   background-color: whitesmoke;
 }
