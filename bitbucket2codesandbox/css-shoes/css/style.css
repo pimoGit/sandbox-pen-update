@@ -1,3 +1,4 @@
+/* general rules */
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* navbar */
 nav {
   position: fixed;
-  width: 100%;
+  top:0;
+  right: 0;
   z-index: 9999;
-  height: 70px;
-  line-height: 70px;
 }
-
-.right {
-  float: right;
+nav ul {
+  display: inline-block; /* solo per consistenza in debugger*/
 }
 
 nav li {
@@ -50,6 +51,8 @@ nav li a:active {
   background-color: #ededed;
 }
 
+
+/* sections */
 section {
   width: 100%;
   height: 100vh;
@@ -65,17 +68,18 @@ section .blocco {
 }
 
 .blocco img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .blocco .text {
   font-family: sans-serif;
-  font-size: 3vw;
+  /* font-size: 3vw; */
+  font-size: 30px ;
   text-align: center;
   font-family: 'Rubik Mono One', sans-serif;
 }
 
-
+/*  sections detail IDs */
 #scarpa-1 {
   background-color: red;
   color: yellow;
