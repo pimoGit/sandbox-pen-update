@@ -13,6 +13,7 @@
 } */
 
 /* Versione con vh */
+/* (rimane un piccola sporcatura in H) */
  #wrapper {
   width: 100%;
   height: 100vh;
