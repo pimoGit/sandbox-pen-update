@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /*Spiegare in livecoding che non è compatibile con tuttii browser*/
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 70px;
+  line-height: 70px;
+}
+
+.right {
+  float: right;
+}
+
+nav li {
+  float: left;
+  list-style: none;
+}
+
+nav li a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 40px 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Rubik Mono One', sans-serif;
+  color: black;
+}
+
+nav li a:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.64);
+}
+
+nav li a:active {
+  color: black;
+  background-color: #ededed;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+section .blocco {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blocco img {
+  width: 100%;
+}
+
+.blocco .text {
+  font-family: sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+
+#scarpa-1 {
+  background-color: red;
+  color: yellow;
+}
+
+#scarpa-2 {
+  background-color: green;
+  color: yellow;
+}
+
+#scarpa-3 {
+  background-color: yellow;
+  color: green;
+}
