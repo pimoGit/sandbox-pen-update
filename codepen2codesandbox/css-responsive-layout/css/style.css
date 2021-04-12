@@ -2,15 +2,25 @@
 RESPONSIVE LAYOUT CSS
 **************************************/
 
+/*  mobile first (regole mobile fuori da mediaquery, 
+regole di deafult) */
 .wrapper {
   max-width: 100%;
   margin: 0 auto;
 }
 
+
+/* primo breakpoint (da 800 in su) */
 @media screen and (min-width: 800px) {
 
   .wrapper {
     max-width: 90%;
+  }
+
+  .wrapper::after{
+    content: "";
+    display: table;
+    clear: both;
   }
   
   header {
@@ -22,17 +32,19 @@ RESPONSIVE LAYOUT CSS
   }
 
   nav {
-    width: 20.83333%;
-    margin-right: 1.041667%;
+    width: 21%;
+    margin-right: 1%;
   }
 
   section {
-    width: 78.125%;
+    width: 78%;
   }
   
 }
 
-
+/* secondo breakpoint (da 1000 in su), 
+così defniti non devo ripetere le regole 
+che non cambiano del breakpoint precendente  */
 @media screen and (min-width: 1000px) {
 
   .wrapper {
@@ -47,9 +59,9 @@ RESPONSIVE LAYOUT CSS
 CSS TO MAKE THE EXAMPLE LOOK PRETTY
 **************************************/
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -59,6 +71,10 @@ body {
   font-family: Helvetica;
   text-align: center;
   margin: 0;
+}
+
+h1 {
+  margin: 20px 0;
 }
 
 header,
