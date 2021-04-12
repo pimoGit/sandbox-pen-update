@@ -1,4 +1,4 @@
-body > button {
+.element {
   background: #428BCA;
   color: #fff;
   font-family: Sans-serif;
@@ -9,13 +9,11 @@ body > button {
   margin: 25px 25px;
   text-align: center;
   border: 0;
+  opacity: 1; /* proprietà in transizione */
   transition: all 0.3s ease 0s;
 }
 
-button {
-opacity: 1;
-}
 
-button:hover {
+.element:hover {
 opacity: 0.75;
 }
