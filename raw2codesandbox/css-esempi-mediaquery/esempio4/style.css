@@ -9,13 +9,13 @@
     height: 200px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
     .rettangolo {
         background-color: green;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
     .rettangolo {
         background-color: red;
     }
