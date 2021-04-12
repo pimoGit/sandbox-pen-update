@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rettangolo {
+    background-color: blue;
+    height: 200px;
+}
+
+@media screen and (max-width: 480px) {
+    .rettangolo {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .rettangolo {
+        background-color: red;
+    }
+}

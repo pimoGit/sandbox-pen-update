@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* approccio mobile-first */
+.quadrato {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+
+
+
+@media (min-width: 479px) {
+    .quadrato {
+        float: left;
+        background-color: red;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}
+
+/* approccio desktop-first */
+/* .quadrato {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin-right: 20px;
+}
+
+@media (max-width: 478px) {
+    .quadrato {
+        float: none;
+        background-color: blue;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+} */
