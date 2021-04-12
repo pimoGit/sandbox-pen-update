@@ -7,6 +7,12 @@ STATIC LAYOUT CSS
   margin: 0 auto;
 }
 
+.wrapper::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
 header {
 	width: 960px;
 }
@@ -30,10 +36,14 @@ section {
 CSS TO MAKE THE EXAMPLE LOOK PRETTY
 **************************************/
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  margin: 20px 0;
 }
 
 body {
