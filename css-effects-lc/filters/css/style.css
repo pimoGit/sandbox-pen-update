@@ -5,8 +5,14 @@
 }
 
 .container {
-  width: 1070px;
+  width: 880px;
   margin: 50px auto;
+}
+
+.container::after{
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .image-container {

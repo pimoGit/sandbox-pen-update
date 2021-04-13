@@ -8,10 +8,10 @@
   margin: 50px auto;
   width: 200px;
   height: 200px;
-  background: blue;
-  transition: background 2s;
+  background-color: blue;
+  transition: background-color 2s;
 }
 
 .square:hover {
-  background: red;
+  background-color: red;
 }
