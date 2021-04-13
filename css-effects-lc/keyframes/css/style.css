@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.square {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: move 5s linear;
+}
+
+@keyframes move
+{
+  0% {
+      left: 0;
+      top: 0;
+  }
+  20% {
+      top: 0;
+      left: calc(100% - 100px);
+  }
+  40% {
+      left: calc(100% - 100px);
+      top: calc(100% - 100px);
+  }
+  60% {
+      top: calc(100% - 100px);
+      left: 0;
+  }
+  80% {
+      top: 0;
+  }
+}
