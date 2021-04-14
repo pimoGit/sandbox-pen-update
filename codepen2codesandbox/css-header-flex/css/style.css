@@ -1,4 +1,10 @@
-header{
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
   background: red;
   height: 192px;
   display: flex;
@@ -7,20 +13,22 @@ header{
   flex-wrap: wrap;
 }
 
-.logo{
+.logo {
   font-size: 45px;
 }
 
-.menu{
+.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  /* queste 2 regole sotto rendono meno ambiguo l'uso di space-around qui 
+  che con il solo padding sui .menu-item non avrebbe molto effetto
+  rimarca che il justify-content lavora su spazio rimanente */
+  width: 470px;
+  max-width: 100%;
 }
 
-.menu-item{
-  padding: 0 15px;
-}
-
-*{
-  box-sizing: border-box;
+.menu-item {
+  /* padding: 0 15px;  */
+  list-style-type: none;
 }
