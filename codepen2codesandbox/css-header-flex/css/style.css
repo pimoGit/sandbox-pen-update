@@ -1,0 +1,26 @@
+header{
+  background: red;
+  height: 192px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.logo{
+  font-size: 45px;
+}
+
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item{
+  padding: 0 15px;
+}
+
+*{
+  box-sizing: border-box;
+}
