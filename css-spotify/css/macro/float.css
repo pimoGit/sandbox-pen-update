@@ -1,0 +1,46 @@
+/* ----------------------- VERSIONI MACRO-STRUTTURA ----------------------- */
+
+  /* ----- VERSIONE FLOAT ----- */
+/* il main racchiude anche la navbar, usiamo calc in questo modo la navbar rimarrà sempre fissa in basso */
+main {
+    height: calc(100% - 90px);
+    /* nascondiamo il contenuto in eccesso di main per consentire al footer di coprire la nav in altezze inferiori a 480px */
+    overflow: hidden;
+  }
+  main:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  /* MAIN NAV */
+  /* per il layout delle macroaree usiamo float e calc */
+  main nav.main-nav {
+    float: left;
+    width: 230px;
+    height: 100%;
+    min-height: 480px;
+  }
+  @media screen and (max-width: 600px) {
+    main nav.main-nav {
+      width: 50px;
+    }
+  }
+  
+  /* MAIN CONTENT */
+  /* per il layout delle macroaree usiamo float e calc */
+  main #content {
+    float: left;
+    width: calc(100% - 230px);
+    height: 100%;
+    /* con overflow il testo non può uscire dal container e facciamo comparire la scrollbar solo quando serve */
+    overflow-y: auto;
+    /* nascondiamo la scroll laterale per nascondere gli album in eccesso */
+    overflow-x: hidden;
+    background: #141922;
+  }
+  @media screen and (max-width: 600px) {
+    main #content {
+      width: calc(100% - 50px);
+    }
+  }

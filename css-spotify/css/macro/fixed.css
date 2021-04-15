@@ -1,0 +1,53 @@
+/* ----------------------- VERSIONI MACRO-STRUTTURA ----------------------- */
+
+  /* ----- VERSIONE FLOAT ----- */
+/* in questa versione il main non ha molta utilità sull'impaginazione 
+tranne il fatto qui di permetterci di tenere il footer uguale alle altre 2 versioni e non forzare anche lui in fixed
+quindi aiuta la centralizzazione delle tre versioni possibili */
+main {
+    height: calc(100% - 90px);
+  }
+  
+  /* MAIN NAV */
+  /* in fixed */
+  main nav.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: calc(100% - 90px);
+    min-height: 480px;
+    background-color: black;
+  }
+  @media screen and (max-width: 600px) {
+    main nav.main-nav {
+      width: 50px;
+    }
+  }
+  
+  /* MAIN CONTENT */
+  /* in fixed */
+  main #content {
+    position: fixed;
+    top: 0;
+    left: 230px;
+    width: calc(100% - 230px);;
+    height: calc(100% - 90px);
+    /* con overflow il testo non può uscire dal container e facciamo comparire la scrollbar solo quando serve */
+    overflow-y: auto;
+    /* nascondiamo la scroll laterale per nascondere gli album in eccesso */
+    overflow-x: hidden;
+    background: #141922;
+  }
+  @media screen and (max-width: 600px) {
+    main #content {
+      left: 50px;
+      width: calc(100% - 50px);
+    }
+  }
+
+  /* visto che la main-nav è in fixed e ha un min-height */
+  footer{
+    position: relative;
+    z-index: 500;
+  }

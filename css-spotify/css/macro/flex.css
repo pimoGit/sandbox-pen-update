@@ -1,0 +1,36 @@
+/* ----------------------- VERSIONI MACRO-STRUTTURA ----------------------- */
+
+  /* ----- VERSIONE FLEX ----- */
+/* il main racchiude anche la navbar, usiamo calc in questo modo la navbar rimarrà sempre fissa in basso */
+main {
+    height: calc(100% - 90px);
+    /* nascondiamo il contenuto in eccesso di main per consentire al footer di coprire la nav in altezze inferiori a 480px */
+    overflow: hidden;
+    display: flex;
+  }
+  
+  /* MAIN NAV */
+  /* per la main nav usiamo il fatto che sia flex-item e width fissa bloccando lo shrink */
+  main nav.main-nav {
+    flex-shrink: 0;
+    width: 230px;
+    height: 100%;
+    min-height: 480px;
+  }
+  @media screen and (max-width: 600px) {
+    main nav.main-nav {
+      width: 50px;
+    }
+  }
+  
+  /* MAIN CONTENT */
+  /* per il main content usiamo il fatto che sia flex-item e il grow ci copre tutto quello che rimane */
+  main #content {
+    flex-grow: 1;
+    height: 100%;
+    /* con overflow il testo non può uscire dal container e facciamo comparire la scrollbar solo quando serve */
+    overflow-y: auto;
+    /* nascondiamo la scroll laterale per nascondere gli album in eccesso */
+    overflow-x: hidden;
+    background: #141922;
+  }

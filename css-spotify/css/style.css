@@ -1,3 +1,10 @@
+/* ----------------------- VERSIONI MACRO-STRUTTURA pre-impostati da scegliere ----------------------- */
+@import url("macro/float.css");
+/* @import url("macro/flex.css"); */
+/* @import url("macro/fixed.css"); */
+
+
+/* general rules */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +13,6 @@
 
 /* MIX */
 body {
-  min-width: 500px;
   font-family: 'Montserrat', sans-serif;
   color: rgb(255, 255, 255);
 }
@@ -66,34 +72,12 @@ ricordiamo che in larghezza se usiamo vw e abbiamo delle scrollbar verticali com
   width: 100%; 
   height: 100vh;
   background: black;
+  min-width: 500px; /*siccome si presuppone una app mobile esistente la nostra webapp non deve coprire tutti i device*/
 }
 
 /* MAIN */
-/* il main racchiude anche la navbar, usiamo calc in questo modo la navbar rimarrà sempre fissa in basso */
-main {
-  height: calc(100% - 90px);
-  /* nascondiamo il contenuto in eccesso di main per consentire al footer di coprire la nav in altezze inferiori a 480px */
-  overflow: hidden;
-}
-main:after {
-  content: '';
-  display: table;
-  clear: both;
-}
+/* ----------------------- MICRO-STRUTTURA/LAYOUT ----------------------- */
 
-/* MAIN NAV */
-/* per il layout delle macroaree usiamo float e calc */
-main nav.main-nav {
-  float: left;
-  width: 230px;
-  height: 100%;
-  min-height: 480px;
-}
-@media screen and (max-width: 600px) {
-  main nav.main-nav {
-    width: 50px;
-  }
-}
 main nav.main-nav .nav-top {
   /* usiamo flex per far calcolare in automatico le altezze */
   display: flex;
@@ -270,22 +254,6 @@ main nav.main-nav .nav-bottom .user .user-name {
 
 
 /* MAIN CONTENT */
-/* per il layout delle macroaree usiamo float e calc */
-main #content {
-  float: left;
-  width: calc(100% - 230px);
-  height: 100%;
-  /* con overflow il testo non può uscire dal container e facciamo comparire la scrollbar solo quando serve */
-  overflow-y: auto;
-  /* nascondiamo la scroll laterale per nascondere gli album in eccesso */
-  overflow-x: hidden;
-  background: #141922;
-}
-@media screen and (max-width: 600px) {
-  main #content {
-    width: calc(100% - 50px);
-  }
-}
 
 /* call to action */
 main #content .call-to-action {
