@@ -1,7 +1,7 @@
 /* ----------------------- VERSIONI MACRO-STRUTTURA ----------------------- */
 
   /* ----- VERSIONE FLEX ----- */
-/* il main racchiude anche la navbar, usiamo calc in questo modo la navbar rimarrà sempre fissa in basso */
+/* il main racchiude anche la navbar, usiamo calc in questo modo il player rimarrà sempre fisso in basso */
 main {
     height: calc(100% - 90px);
     /* nascondiamo il contenuto in eccesso di main per consentire al footer di coprire la nav in altezze inferiori a 480px */

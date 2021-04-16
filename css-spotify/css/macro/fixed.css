@@ -1,8 +1,8 @@
 /* ----------------------- VERSIONI MACRO-STRUTTURA ----------------------- */
 
   /* ----- VERSIONE FLOAT ----- */
-/* in questa versione il main non ha molta utilità sull'impaginazione 
-tranne il fatto qui di permetterci di tenere il footer uguale alle altre 2 versioni e non forzare anche lui in fixed
+/* in questa versione il main non ha molta utilità sull'impaginazione dei blocchi che contiene,
+ma ci permette di tenere il footer uguale alle altre 2 versioni e non forzare anche lui in fixed
 quindi aiuta la centralizzazione delle tre versioni possibili */
 main {
     height: calc(100% - 90px);
@@ -46,7 +46,7 @@ main {
     }
   }
 
-  /* visto che la main-nav è in fixed e ha un min-height */
+  /* visto che la main-nav è in fixed e ha un min-height gestiamo la sovrapposizione */
   footer{
     position: relative;
     z-index: 500;
