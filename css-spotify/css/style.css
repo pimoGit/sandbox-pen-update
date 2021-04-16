@@ -1,7 +1,7 @@
 /* ----------------------- VERSIONI MACRO-STRUTTURA pre-impostati da scegliere ----------------------- */
-@import url("macro/float.css");
+/* @import url("macro/float.css"); */
 /* @import url("macro/flex.css"); */
-/* @import url("macro/fixed.css"); */
+@import url("macro/fixed.css");
 
 
 /* general rules */
@@ -78,11 +78,19 @@ ricordiamo che in larghezza se usiamo vw e abbiamo delle scrollbar verticali com
 /* MAIN */
 /* ----------------------- MICRO-STRUTTURA/LAYOUT ----------------------- */
 
-main nav.main-nav .nav-top {
-  /* usiamo flex per far calcolare in automatico le altezze */
+main nav.main-nav{
+  /* il flex permettere, settando il grow su .nav-top, di far stare .nav-bottom sempre in fondo */
   display: flex;
   flex-direction: column;
-  height: calc(100% - 80px);
+  justify-content: space-between;
+}
+
+main nav.main-nav .nav-top {
+  flex-grow: 1;
+  /* usiamo flex per far calcolare in automatico le altezze che grazie allo shrink fa funzionare lo scroll auto */
+  display: flex;
+  flex-direction: column; 
+  /* height: calc(100% - 80px); in alternativa volendo a mettere main-nav in flex, ma meno futureProof*/
   /* overflow ancora una volta ci consente di far sparire il testo in eccesso */
   overflow-y: hidden;
 }
@@ -146,16 +154,23 @@ main nav.main-nav .nav-top .nav-main-menu .menu-list img {
 main nav.main-nav .nav-top .nav-playlist {
   padding: 20px;
   overflow: hidden;
+  /*height: calc(100% - 190px); tutta la H meno altri blocchi, in alternativa volendo a mettere nav-top in flex, ma meno futureProof  */
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 600px) {
+  main nav.main-nav{ 
+    min-height: auto;
+  }
   main nav.main-nav .nav-top .nav-playlist {
     display: none;
   }
 }
 main nav.main-nav .nav-top .nav-playlist .menu-list{
   /* la playlist si rimpicciolisce poi compare una scrollbar */
-  height: 80%;
-  overflow-y: auto;
+  /*height: calc(100% - 77px); in alternativa volendo a mettere .nav-playlist in flex, ma meno futureProof */
+  /* height: 80%; -OV-*/
+  overflow-y: auto; /* essendo flex-item lo shrink fa il trick di ridimensionare la sua H e farlo funzionare*/
 }
 main nav.main-nav .nav-top .nav-playlist h2 {
   margin-bottom: 10px;
@@ -187,6 +202,7 @@ main nav.main-nav .nav-top .nav-playlist .add-playlist:hover span:before {
 
 /* usiamo flex per centrare in altezza */
 main nav.main-nav .nav-bottom {
+  flex-shrink: 0; /* è flex-item ma vogliamo fissare la H a 80px*/
   display: flex;
   flex-direction: column;
   justify-content: space-around;
