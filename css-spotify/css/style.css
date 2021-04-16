@@ -1,7 +1,7 @@
 /* ----------------------- VERSIONI MACRO-STRUTTURA pre-impostati da scegliere ----------------------- */
-/* @import url("macro/float.css"); */
+@import url("macro/float.css");
 /* @import url("macro/flex.css"); */
-@import url("macro/fixed.css");
+/* @import url("macro/fixed.css"); */
 
 
 /* general rules */
@@ -200,7 +200,7 @@ main nav.main-nav .nav-top .nav-playlist .add-playlist:hover span:before {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* usiamo flex per centrare in altezza */
+/* usiamo flex per centrare in altezza, soprattutto per cambio versione mobile */
 main nav.main-nav .nav-bottom {
   flex-shrink: 0; /* è flex-item ma vogliamo fissare la H a 80px*/
   display: flex;
@@ -210,17 +210,19 @@ main nav.main-nav .nav-bottom {
   padding-right: 20px;
   padding-left: 20px;
 }
-/* usiamo flex per centrare in altezza */
-main nav.main-nav .nav-bottom .app-download a,
-main nav.main-nav .nav-bottom .user {
+
+main nav.main-nav a img {
+ vertical-align: middle;
+}
+/* volendo alternativa usiamo flex per centrare in altezza */
+/* main nav.main-nav a {
   display: flex;
   align-items: center;
-}
+} */
+
 main nav.main-nav .nav-bottom .app-download {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
-main nav.main-nav .nav-bottom .app-download a {
   font-size: 13px;
 }
 main nav.main-nav .nav-bottom .app-download img {
