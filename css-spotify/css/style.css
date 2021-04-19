@@ -439,6 +439,7 @@ footer {
 #player .player-album .player-album-cover img {
   width: 100%;
 }
+
 #player .player-album .player-album-title {
   width: 50%;
   padding-left: 10px;
@@ -552,4 +553,15 @@ footer {
 
 #player .player-audio ul i:not(.fa-volume-up) {
   cursor: pointer;
+}
+
+
+/* BONUS player più responsive */
+@media all and (max-width: 645px){
+  #player .player-album .player-album-cover {
+    display: none;
+  }
+  #player .player-album .player-album-title {
+    padding: 0;;
+  }
 }
