@@ -277,6 +277,8 @@ main nav.main-nav .nav-bottom .user .user-name {
 main #content .call-to-action {
   /* ricordiamo che il fixed si posiziona sempre rispetto alla viewport */
   position: fixed;
+  right: 0;
+  top: 0;
   z-index: 1;
   width: calc(100% - 230px);
   height: 90px;
@@ -320,91 +322,87 @@ main #content .main-content-nav a.active:after {
 }
 
 /* covers */
-main #content .covers .covers-row > p{ 
+main #content .covers-row > p{ 
   margin-top: 10px;
 }
-main #content .covers .covers-row {
+main #content .covers-row {
   margin: 20px;
 }
 /* usiamo display flex per gestire le cover */
-main #content .covers .covers-list {
+main #content .covers-list {
   display: flex;
   margin: 30px 0;
 }
 /* gestiamo le grandezze con calc e mediaquery */
-main #content .covers .covers-list .cover-item {
+main #content .covers-list .cover-item {
   flex-shrink: 0;
   width: calc(100% / 6 - 15px);
   margin-right: 15px;
   cursor: pointer;
 }
 @media screen and (max-width: 1100px) {
-  main #content .covers .covers-list .cover-item {
+  main #content .covers-list .cover-item {
     width: calc(100% / 4 - 10px);
     margin-right: 10px;
   }
   /* inizialmente facciamo scivolare gli elementi sotto con wrap */
-  main #content .covers .covers-list {
+  main #content .covers-list {
     flex-wrap: wrap;
   }
   /* BONUS */
   /* settiamo come display none gli ultimi 2 elementi che non siano i primi 2*/
-  /* main #content .covers .covers-list .cover-item:nth-last-child(-n+2):not(:nth-child(-n+2)) {
+  /* main #content .covers-list .cover-item:nth-last-child(-n+2):not(:nth-child(-n+2)) {
     display: none;
   } */
 }
 @media screen and (max-width: 700px) {
-  main #content .covers .covers-list .cover-item {
+  main #content .covers-list .cover-item {
     width: calc(100% / 2 - 10px);
     margin-right: 10px;
   }
   /* BONUS */
   /* settiamo come display none gli ultimi 4 elementi che non siano i primi 2 */
-  /* main #content .covers .covers-list .cover-item:nth-last-child(-n+4):not(:nth-child(-n+2)) {
+  /* main #content .covers-list .cover-item:nth-last-child(-n+4):not(:nth-child(-n+2)) {
     display: none;
   } */
 }
-main #content .covers .covers-list .cover-item .cover-container {
+main #content .covers-list .cover-item .cover-container {
   position: relative;
-  display: flex;
   width: 100%;
   margin-bottom: 20px;
 }
-main #content .covers .covers-list .cover-item .cover-container .cover-layover{
+main #content .covers-list .cover-item .cover-container .cover-layover{
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+main #content .covers-list .cover-item:hover .cover-container .cover-layover{
   /* allineo icona con flex */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  font-size: 60px;
 }
-main #content .covers .covers-list .cover-item .cover-container .cover-layover i{
-  display: none;
-}
-main #content .covers .covers-list .cover-item:hover .cover-container .cover-layover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-main #content .covers .covers-list .cover-item:hover .cover-container .cover-layover i {
-  display: inline;
-}
-main #content .covers .covers-list .cover-item .cover-text{
+
+main #content .covers-list .cover-item .cover-text{
  text-align: center;
 }
-main #content .covers .covers-list .cover-item .cover-text h3{
+main #content .covers-list .cover-item .cover-text h3{
  font-size: 16px;
  line-height: 16px;
 }
-main #content .covers .covers-list .cover-item .cover-container img{
-  max-width: 100%;
+main #content .covers-list .cover-item .cover-container img{
+  width: 100%;
+  display: block; /* toglie la sporcature di marginBottom della img*/
 }
-main #content .covers #popular .cover-item .cover-container img{
+main #content .rounded-items .cover-item .cover-container img{
   border-radius: 100%;
 }
-main #content .covers #popular .cover-item .cover-container {
+main #content .rounded-items .cover-item .cover-container {
   border-radius: 100%;
   overflow: hidden;
 }
